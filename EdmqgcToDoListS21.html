@@ -1,0 +1,104 @@
+<!--
+    Name: Ethan Marchbanks
+    Pawprint: edmqgc
+    Date: 3/2/2021
+    Challenge: To-Do ListS21
+    References: 1)https://www.w3schools.com/tags/att_input_type_range.asp
+                2)https://api.jquery.com/val/
+                3)https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_rangeslider
+                4)https://stackoverflow.com/questions/32972023/setting-the-date-in-date-field-sets-it-with-one-day-before
+                5)https://getbootstrap.com/docs/4.1/getting-started/introduction/
+                6)Font from https://fonts.google.com/specimen/Akaya+Telivigala?preview.text_type=custom
+                7)https://www.freepik.com/free-icon/back-arrow_781308.htm
+                8)https://www.w3schools.com/jsref/met_win_prompt.asp
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>EdmqgcToDoListS21</title>
+        
+        <!-- Bootstrap from https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- Bootstrap from https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+        
+        <link rel="stylesheet" type="text/css" href="EdmqgcToDoListS21.css">
+        
+        <!-- Font from https://fonts.google.com/specimen/Akaya+Telivigala?preview.text_type=custom -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+        <!-- Font from https://fonts.google.com/specimen/Akaya+Telivigala?preview.text_type=custom -->
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        
+        <script src="EdmqgcToDoListS21.js"></script>
+    </head>
+    <body class="lightBody">
+        <div class="aContainer clearfix">
+            <a href="EdmqgcProjectsS21.html">Back To Projects<img id="arrow" src="EdmqgcToDoListS21backarrowlight.png" alt="arrow"></a>
+        </div>       
+        <div class="clearfix" id="themeContainer">
+            <button id="theme" class="clearfix" type="button">Light Mode</button>
+        </div>
+        <div class="pageTitleContainer">
+            <h2 class="pageTitle">To-Do List</h2>  
+        </div>
+        <div id="toDoItems">
+            <table class="table table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Priority</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="addHere">
+                </tbody>
+            </table>
+        </div>
+        <div class="formLight">
+            <form id="myForm">
+                <div id="error" hidden>
+                    <h4 id="errorMessage">***Please fill out all fields!***</h4>
+                </div>
+                <div class="d-flex flex-row justify-content-around">                  
+                    <div class="p-2">
+                        <label for="title">Title of To-Do Item:</label>
+                        <input id="title" type="text" name="title" maxlength="30">
+                    </div>
+                    <div class="p-2">
+                        <label for="type">Type of To-Do Item:</label>
+                        <select id="type" name="type[]">
+                            <option selected disabled>--Select One--</option> 
+                            <option value="Personal">Personal</option>
+                            <option value="Chore">Chore</option>  
+                            <option value="Education">Education</option>
+                            <option value="Career">Career</option>
+                            <option value="List">List</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>  
+                    <div id="priorityInfo" class="p-2">
+                        <label for="priority">Set Priority:</label>
+                        <input id="priority" type="range" name="points" min="0" max="6">
+                        <span id="priorityOutput"></span>
+                    </div>
+                    <div class="p-2">
+                        <label for="date">Date:</label>
+                        <input id="date" type="date" name="date">
+                    </div>
+                    <div class="p-2">
+                        <button id="add" type="submit" value="Submit">Add Item</button>
+                    </div>
+                    <div class="p-2">
+                        <button id="clear" type="button">Clear</button>
+                    </div>                   
+                </div>                                
+            </form>
+        </div>
+    </body>
+</html>

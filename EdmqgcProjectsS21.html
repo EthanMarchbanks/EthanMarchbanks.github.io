@@ -1,0 +1,57 @@
+<!--
+    Name: Ethan Marchbanks
+    Pawprint: edmqgc
+    Date: 2/19/2021
+    Challenge: Flex Box S21
+    References: 1) https://www.w3schools.com/cssref/pr_font_weight.asp
+                2) https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp
+                3) https://fonts.google.com/specimen/Truculenta?preview.text_type=custom&sidebar.open=true&selection.family=Truculenta:wght@500
+                4) https://teamtreehouse.com/community/centering-spans-within-a-div
+                5) https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>EdmqgcProjectsS21</title>
+        
+        <link rel="stylesheet" type="text/css" href="EdmqgcProjectsS21.css">
+        
+        <!-- Start of links for font from https://fonts.google.com/specimen/Truculenta?preview.text_type=custom&sidebar.open=true&selection.family=Truculenta:wght@500 -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@500&display=swap" rel="stylesheet">
+        <!-- End of links for font from https://fonts.google.com/specimen/Truculenta?preview.text_type=custom&sidebar.open=true&selection.family=Truculenta:wght@500 -->
+        
+        <link rel="stylesheet" type="text/css" href="EdmqgcNavbarS21.css">
+        
+    </head>
+    <body>
+        <ul id="navbar">
+            <li class="name"><a href="index.html">Ethan Marchbanks</a></li>
+            <li class="navButton"><a href="EdmqgcColumnsS21.html">Skills</a></li>
+            <li class="navButton"><a href="EdmqgcTablesS21.html">Courses</a></li>
+            <li class="navButton currentTab"><a href="EdmqgcProjectsS21.html">Projects</a></li>
+        </ul>
+        <div id="mainContainer">
+            <div class="cardContainer">
+                <img class="cardImg" src="EdmqgcToDoListS21projectimg.png" alt="To Do List">
+                <span class="cardTitle">To Do List</span>
+                <p class="cardDesc">In this project, I created a website to help users keep up with tasks in a to-do list. They have the ability to add as many items as they want, and pick the priority levels for each one. The user can then check the item off the list when it is complete and it will be removed from the list.</p>
+                <a class="cardLink" href="EdmqgcToDoListS21.html">To Do List Project Link</a>
+            </div>
+            <div class="cardContainer">
+                <img class="cardImg" src="EdmqgcPHPS21projectimg.png" alt="PHP Playground">
+                <span class="cardTitle">PHP Playground</span>
+                <p class="cardDesc">In this project, I created a website to demonstrate my knowledge of the PHP language. The user can select one of five simple functions that perform tasks using GET or POST methods that are processed in .php files. Only one form is shown depending on which function the user selects. The user sees the result of the function in another page.</p>
+                <a class="cardLink" href="./EdmqgcPHPS21/">PHP Project Link</a>
+            </div>
+            <div class="cardContainer">
+                <img class="cardImg" src="EdmqgcAJAX-S21rover.jpg" alt="Mars Explorer">
+                <span class="cardTitle">Mars Explorer</span>
+                <p class="cardDesc">In this project, I created a website to demonstrate my knowledge of AJAX. The user can provide a sol (martian day) and a list of photos taken on the given sol by the Opportunity rover will be displayed. The user can also input a date and the NASA Astronomy Photo of the Day for the given day will be displayed. All photos are fetched by AJAX requests.</p>
+                <a class="cardLink" href="./EdmqgcAJAX-S21/">AJAX Project Link</a>
+            </div>
+        </div>
+    </body>
+</html>

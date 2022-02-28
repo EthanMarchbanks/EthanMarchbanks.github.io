@@ -1,0 +1,133 @@
+.check{
+    width: 30px;
+    height: 30px;
+}
+
+#arrow {
+    width: 30px;
+    height: 30px;
+    padding-bottom: 5px;
+}
+
+.stars {
+    width: 120px;
+    height: 20px;
+}
+
+#errorMessage {
+    color: red;
+    text-align: center;
+}
+
+#toDoItems {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+#add {
+    background-color: greenyellow;
+    border-radius: 20px 10px;
+}
+
+#clear {
+    background-color: orangered;
+    border-radius: 20px 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.pageTitle {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+}
+
+a {
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, p, span, label, a, button, th, td {
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 150%;
+}
+
+#theme {
+    float: right;
+    background-color: lightcyan;
+    border: 5px solid beige;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-right: 20px; 
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#themeContainer {
+    display: inline;
+}
+
+.formLight {
+    background-color: lightcyan;
+    border: 5px solid beige;
+    border-radius: 50px;
+    box-shadow: 0px 0px 30px 10px beige;
+    margin: 50px;
+    padding: 20px;
+}
+
+#formDark {
+    background-color: darkgray;
+    border: 5px solid darkslategrey;
+    box-shadow: 0px 0px 30px 10px lightgray;
+}
+
+.lightBody {
+    background-color: white;
+}
+
+#darkBody {
+    background-color: black;
+}
+
+#darkTitle {
+    color: white;
+}
+
+.aContainer {
+    background-color: lightcyan;
+    float: left;
+    border: 5px solid beige;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 20px;  
+}
+
+#aContainerDark {
+    background-color: darkgray;
+    border: 5px solid darkslategray;
+}
+
+#aDark {
+    color: black;
+}
+
+.pageTitleContainer {
+    background-color: lightcyan;
+    border: 5px solid beige;
+    border-radius: 20px;
+    margin: 10px 50px;
+}
+
+#pageTitleContainerDark {
+    background-color: darkgray;
+    border: 5px solid darkslategray;
+}

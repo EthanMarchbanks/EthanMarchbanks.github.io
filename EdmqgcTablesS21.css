@@ -1,0 +1,133 @@
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    background-color: orange; 
+}
+
+a.nav {
+    text-decoration: none;
+    color: darkslategray;
+}
+            
+.navButton {
+    display: inline-block;
+    margin: 20px;
+    font-size: 25px;
+    font-family: monospace;
+    color: darkslateblue;
+    padding: 5px;
+}
+
+.name {
+    margin: 20px;
+    font-size: 30px;
+    font-family: cursive;
+    font-style: oblique;
+    color: darkslategray;
+    display: inline-block;
+    padding: 5px;
+}
+
+.name:hover, .navButton:hover {
+    background-color: lightcyan;
+    border 2px solid lightcyan;
+    border-radius: 30px;                
+}
+
+a:active {
+    background-color: darkcyan;
+    border 2px solid darkcyan;
+    border-radius: 30px;     
+}
+
+body {
+    background-color: gainsboro;
+}
+
+#truman {
+    height: 60px;
+    margin-left: 50px
+}
+
+th {
+    font-size: 20px;
+    font-family: 'Kalam', cursive;
+}
+
+td {
+    font-family: 'Eczar', serif;
+}
+
+table {
+    margin-top: 103px;
+}
+
+#cs {
+    background-color: beige;
+    text-align: center;
+    font-size: 24px;
+}
+
+#it {
+    background-color: bisque;
+    text-align: center;
+    font-size: 24px;
+}
+
+#math {
+    background-color: burlywood;
+    text-align: center;
+    font-size: 24px;
+}
+
+.card {
+    border: 10px solid beige;
+    margin: 50px;
+    box-shadow: 12px 12px 12px 12px darkgray;
+    height: 660px;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: block;
+    margin: auto;
+    width: 85%;
+}
+
+#csharp {
+    height: 30%;
+    width: 55%;
+}
+
+.lang {
+    font-size: 26px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Eczar', serif;
+}
+
+.fapri {
+    font-size: 18px;
+}
+
+#fapri {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#me {
+    width: 75%;
+    height: 60%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.currentTab {
+    text-decoration: underline;
+}

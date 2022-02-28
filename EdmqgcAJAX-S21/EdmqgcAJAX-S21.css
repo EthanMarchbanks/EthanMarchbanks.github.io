@@ -1,0 +1,308 @@
+* {
+    font-family: 'PT Sans', sans-serif;
+}
+
+#wrapper {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid darkblue;
+    border-radius: 25px;
+    display: none;
+    overflow: hidden;
+    background-color: darkblue;
+}
+
+#alert {
+    display: none;
+}
+
+#alertBox {
+    text-align: center;
+    background-color: cadetblue;
+    position: absolute;
+    width: 80%;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;    
+    z-index: 9999;
+    border: 5px solid black; 
+    border-radius: 20px;
+    height: 400px;
+    overflow: hidden;
+}
+
+#alertOpaque {
+    opacity: 0.6;
+    background-color: black;
+    position: absolute;
+    z-index: 9998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+#alertTitle {
+    border-bottom: 3px solid red;
+    border-top: 3px solid red;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 40px;
+    font-family: 'Anton', sans-serif;
+    float: left;
+    width: 100%;
+    background-color: darkblue;
+    color: red;
+}
+
+#alertClose {
+    background-color: darkgray;
+    border: 2px solid black;
+    float: left;
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+#alertClose:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+#alertText {
+    padding: 10px;
+    margin-top: 80px;
+    font-size: 30px;    
+}
+
+#alertCloseText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    font-size: 18px;
+}
+
+#title {
+    text-align: center;
+    background-color: crimson;
+    color: white;
+    border-bottom: 5px solid darkblue;
+    padding: 20px;
+    margin: 0;
+}
+
+#titleText {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
+    font-size: 50px;
+}
+
+.inputTitle {
+    padding: 15px;
+}
+
+#photoTitle {
+    text-align: center;
+    border-bottom: 3px solid darkblue;
+    background-color: cadetblue;
+    padding: 25px;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+h1, h2, h3, h5 {
+    padding: 0;
+    margin: 0;
+}
+
+#rover, #APOD, #infoDateContainer, #infoDescContainer {
+    border: 3px solid darkslategray;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    background-color: darkturquoise;
+}
+
+#infoDateContainer {
+    border-radius: 25px;
+    margin: 20px 5px;
+}
+
+.inputTitle, #infoTitleContainer {
+    text-align: center;
+    border: 3px solid darkslategray;
+    margin: 5px;
+    margin-top: 100px;
+    border-radius: 25px;
+    background-color: darkcyan;
+}
+
+#infoTitleContainer, #infoDateContainer, #infoDescContainer {
+    padding: 20px;
+}
+
+#photoContainer {
+    float: left;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    height: 800px;
+    width: 43.5%;
+    background-color: cornflowerblue;
+}
+
+#sol {
+    width: 60px;
+}
+
+#back {
+    text-align: center;
+    font-size: 30px;
+    border: 3px solid darkblue;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 11%;
+    margin-top: 48px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 0;
+    left: 80px;
+    z-index: 1;
+}
+
+body a {
+    color: white;
+    text-decoration: none;
+}
+
+#slideshow-container, #APODphoto {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: none;
+    position: relative;
+    height: 600px;
+}
+
+.currentAPOD, .mySlides {
+    margin: 0 auto;
+    width: 80%;
+    max-height: 600px;
+    border: 3px solid darkblue;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0px 0px 30px 10px black;
+    padding: 0;
+    background-color: darkblue;
+}
+
+#left, #right {
+    float: left;
+    height: 800px;
+    width: 28%;
+    background-color: cadetblue;
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Beginning of code mostly from https://www.w3schools.com/howto/howto_js_slideshow.asp */
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.2s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);      
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: .2s;
+    animation-name: fade;
+    animation-duration: .2s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+/* End of code mostly from https://www.w3schools.com/howto/howto_js_slideshow.asp */
+
+/* Beginning of code mostly from https://www.w3schools.com/howto/howto_css_loader.asp */
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid gray;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* End of code mostly from https://www.w3schools.com/howto/howto_css_loader.asp */

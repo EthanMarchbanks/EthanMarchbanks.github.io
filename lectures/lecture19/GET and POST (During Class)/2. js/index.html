@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+<head>
+    <title>JavaScript Submit</title>
+    <script>
+        /*
+            With forms, GET data is encoded automatically, 
+            before it is sent
+            
+            However, If we construct a URL in javascript we must
+            make sure the data is encoded
+            
+            There are a number of illegal characters that could ruin
+            our URL
+            
+            If we don't encode it, the ampersand in 'muA&M'
+            would make the URL look like this:
+            
+            process.php?sid=muA&M
+            
+            That would make for one key/value pair with 'sid' = 'muA'
+            and 'M' to nothing
+        */
+        var schoolId = "muA&M";
+        
+        function doSubmit() {
+            var formObj = document.getElementById("myForm");
+            
+            formObj.action = "process.php?sid=" + encodeURIComponent(schoolId);
+            formObj.submit();
+        }
+    
+    </script>
+</head>
+<body>
+	<form id="myForm" method="POST">
+		<input type="text" name="myText">
+	</form>
+	<button type="button" onclick="doSubmit()">Submit via JavaScript</button>
+</body>
+</html>

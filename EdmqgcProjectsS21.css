@@ -1,0 +1,58 @@
+#mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    position: relative;
+    margin: 50px auto;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.cardContainer {
+    width: 450px;
+    background-color: goldenrod;
+    border: 2px groove red;
+    border-radius: 10px;
+    height: 600px;
+    position: relative;
+    margin: 5% 2%;
+    box-shadow: 12px 12px 12px 18px black;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cardImg {
+    width: 100%;
+    border-bottom: 10px solid red;
+    height: 50%;
+}
+
+.cardTitle {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Truculenta', sans-serif;
+}
+
+.cardDesc {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Truculenta', sans-serif;
+}
+
+.cardLink {
+    text-align: center;
+    font-size: 22px;
+    text-decoration: underline;
+    font-weight: bold;
+    color: red;
+    font-family: 'Truculenta', sans-serif;
+}
+
+body {
+    background-image: url(EdmqgcProjectsS21background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

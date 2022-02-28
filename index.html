@@ -1,1 +1,148 @@
-<h1>Hello<h1>
+<!--
+    Name: Ethan Marchbanks
+    Pawprint: edmqgc
+    Date: 3/17/2021
+    Challenge: Web Servers S21
+-->
+
+
+<!--
+    Name: Ethan Marchbanks
+    Pawprint: edmqgc
+    Date: 1/27/2021
+    Challenge: Portfolio S21 w/ Both Bonus Objectives Attempted
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>EdmqgcPortfolioS21</title>
+        
+        <style>           
+            /* I have a max width specified here but because of the container its in, it doesn't actually do anything. */
+            #portrait {
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                margin-top: 100px;
+                margin-bottom: 50px;
+                width: 100%;
+                max-width: 40%;
+                min-width: 60%;
+                border-color: darkslategray;
+                border-width: thick;
+                border-style: groove;
+                width: 500px;
+                height: 300px;
+            }
+            
+            /* Instructions say to use h2 but rubric says to use h3. */
+            h3 {
+                margin-top: 30px;
+                margin-bottom: 10px;
+                text-align: center;
+                position: relative;
+                color: orange;
+                font-size: 30px;
+                font-family: cursive;
+                font-style: oblique;
+            }
+            
+            .myParagraph {
+                text-align: center;
+                font-size: 22px;
+                color: yellow;
+            }
+
+            body {
+                background-color: slategray;
+            }
+
+            .container {
+                height: 200px;
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+
+            .center {
+                width: 500px;
+                height: 700px;
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                max-width: 100%;
+                max-height: 100%;
+            }
+            
+            .styleButton {
+                padding: 10px;
+                margin: 0px 20px;
+                border-radius: 25px;
+                font-family: sans-serif;
+                font-size: 20px;
+                color: green;
+                display: block;
+                height: 80px;
+                width: 100px;
+                float: left;
+                overflow: hidden;
+            }
+            
+            .styleButton:hover {
+                cursor: pointer;
+                width: 140px;
+                margin: 0;
+            }
+            
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            
+            #centerButtons {
+                width: 420px;
+                margin: 0 auto;
+            }
+            
+            .buttonImg {
+                width: 80px;
+                height: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+        
+        <link rel="stylesheet" type="text/css" href="EdmqgcNavbarS21.css">
+    </head>
+    <body>
+        <ul id="navbar">
+            <li class="name currentTab"><a href="index.html">Ethan Marchbanks</a></li>
+            <li class="navButton"><a href="EdmqgcColumnsS21.html">Skills</a></li>
+            <li class="navButton"><a href="EdmqgcTablesS21.html">Courses</a></li>
+            <li class="navButton"><a href="EdmqgcProjectsS21.html">Projects</a></li>
+        </ul>
+        <div class="container">
+            <div class="center">
+                <img id="portrait" src="EdmqgcPortfolioS21portrait.jpg" alt="Photo of me">
+                <h3>Ethan Marchbanks</h3>
+                <p class="myParagraph">Future Computer Science graduate aspiring to be web developer from the University of Missouri-Columbia</p>
+                <div id="centerButtons" class="clearfix">
+                    <button class="styleButton" onclick="document.location='EdmqgcPortfolioS21resume.docx'">Resume</button>
+                    <button class="styleButton" id="linkedInButton" onclick=" window.open('https://www.linkedin.com/in/ethan-marchbanks-14a563205/','_blank')">
+                        <img class ="buttonImg" src="EdmqgcPortfolioS21linkedinlogo.png" alt="linkedIn Logo">
+                    </button>
+                    <button class="styleButton" onclick=" window.open('https://github.com/EthanMarchbanks','_blank')">
+                        <img class ="buttonImg" src="EdmqgcPortfolioS21githublogo.png" alt="GitHub Logo">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

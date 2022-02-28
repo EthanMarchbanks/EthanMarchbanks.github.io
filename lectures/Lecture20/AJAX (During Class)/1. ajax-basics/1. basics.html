@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+<head>
+	<title>AJAX Intro</title>
+	<script>
+        
+        // Reference: http://www.w3schools.com/ajax/default.asp
+		function getContent() {
+            
+            // first we need to create an XMLHttpRequest Object (AJAX Object)
+            // http://www.w3schools.com/ajax/ajax_xmlhttprequest_create.asp
+            var xmlHttp = new XMLHttpRequest();
+            
+            // then we need to setup what will happen when we get a response from the server
+            // http://www.w3schools.com/ajax/ajax_xmlhttprequest_onreadystatechange.asp
+            xmlHttp.onreadystatechange = function(){
+                if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    
+                    // http://www.w3schools.com/ajax/ajax_xmlhttprequest_response.asp
+                    var response = xmlHttp.responseText;
+                    
+                    var contentBox = document.getElementById("contentBox");
+                    contentBox.innerHTML = response;
+                }
+            };
+            
+            // we added this "loading.." message in the contentBox before receiving response
+            document.getElementById("contentBox").innerHTML = "Loading...";
+            
+            // specifying the type of request (GET/POST) and where it's going and async = true
+            xmlHttp.open("GET", "responder.php", true);
+            
+            // send the ajax request
+            xmlHttp.send();
+        }
+            
+            
+            
+            
+            
+            
+                    
+                    
+                    
+            
+            
+            
+            // http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp
+           
+	</script>
+</head>
+<body>
+	<h1>Content</h1>
+	<p id="contentBox"></p>
+	<button type="button" onclick="getContent()">Get Content</button>
+</body>
+</html>

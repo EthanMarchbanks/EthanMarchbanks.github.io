@@ -1,0 +1,215 @@
+<!--
+     Name: Ethan Marchbanks
+     Pawprint: edmqgc
+     Date: 2/3/2021
+     Challenge: Multi-Column Layout S21 W/ Bonus Objective
+
+     References:
+            1) https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/
+            2) https://www.w3schools.com/css/css_float_clear.asp
+            3) https://www.w3schools.com/css/css3_animations.asp
+            4) https://stackoverflow.com/questions/36716099/how-to-fill-part-of-the-background-with-gradient-color
+            5) https://www.w3schools.com/css/css_link.asp
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>EdmqgcColumnsS21</title>
+        <style>
+            #mainWrapper {
+                width: 1122px;
+                border: 9px solid brown;
+                border-radius: 20px;
+                padding: 10px;    
+                background: linear-gradient(to top, burlywood 50%, lightgray 50%);
+                background-size: 100% 201%;
+                animation: mymove 20s forwards;
+                margin-top: 150px;
+            }
+            
+            @keyframes mymove {
+                from {background-position: top;}
+                to {background-position: bottom;}
+            }
+            
+            #rowWrapper {
+                width: 435px;
+                margin: 21px;
+                float: left;
+            }
+            
+            .leftRightColumns {
+                padding: 21px;
+                margin: 21px;
+                height: 425px;
+                border: 6px solid orange;
+                border-radius: 20px;
+                float: left;
+            }
+            
+            #leftColumn {
+                width: 244px;
+                background-color: beige;
+            }
+            
+            #rightColumn {
+                width: 209px;
+                background-color: beige;
+            }
+            
+            #topRow {
+                width: 376px;
+                height: 211px;
+                padding: 22px;
+                border: 6px solid orange;
+                border-radius: 20px;
+                background-color: beige;
+                margin-bottom: 26px;
+            }
+            
+            #bottomRow {
+                width: 376px;
+                height: 130px;
+                padding: 22px;
+                border: 6px solid orange;
+                border-radius: 20px;
+                background-color: beige;
+            }
+            
+            /* Start of code from https://www.w3schools.com/css/css_float_clear.asp */
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            /* End of code from https://www.w3schools.com/css/css_float_clear.asp */
+            
+            h1 {
+                text-align: center;
+                font-family: serif;
+                color: brown;
+                font-size: 40px;
+            }
+            
+            h2 {
+                text-align: center;
+                font-family: serif;
+                color: brown;
+            }
+            
+            li {
+                margin-bottom: 10px;
+            }
+            
+            body {
+                background-color: antiquewhite;
+            }
+            
+            #center {
+                /* Start of code from https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                /* End of code from https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
+            }
+        </style>
+        
+        <link rel="stylesheet" type="text/css" href="EdmqgcNavbarS21.css">
+    </head>
+    <body>
+        <!-- Main wrapper. This div should wrap all columns, row wrapper, and title header -->
+        <ul id="navbar">
+            <li class="name"><a href="index.html">Ethan Marchbanks</a></li>
+            <li class="navButton currentTab"><a href="EdmqgcColumnsS21.html">Skills</a></li>
+            <li class="navButton"><a href="EdmqgcTablesS21.html">Courses</a></li>
+            <li class="navButton"><a href="EdmqgcProjectsS21.html">Projects</a></li>
+        </ul>
+        <div id="center"> <!-- start of centering container -->
+        <div id="mainWrapper" class="clearfix">
+            <h1>Skills</h1>
+            <!-- Left Column -->
+            <!-- Put left column physical width calculations here: 
+                    Left physical width =
+                       244px -> content width
+                        42px -> padding (21px left, 21px right)
+                        12px -> border (6px left, 6px right)
+                    +   42px -> margin (21px left, 21px right)
+                    _____________
+                       340px
+            -->
+            <div id="leftColumn" class="leftRightColumns">
+                <h2>Courses</h2>
+                <ul>
+                    <li>Algorithm Design and Programming I</li>
+                    <li>Algorithm Design and Programming II</li>
+                    <li>Introduction to Logic Systems</li>
+                    <li>Web Application Development I</li>
+                    <li>Advanced Algorithm Design</li>
+                    <li>Object Oriented Programming</li>
+                    <li>Database Applications and Information Systems</li>
+                </ul>
+            </div>
+            
+            <!-- Row Wrapper. This div will contain two rows -->
+            <!--Put middle column physical width calculations here:
+                    Middle physical width =
+                        435px -> content width
+                    +    42px -> margin (21px left, 21px right)
+                    ______________
+                        477px
+            -->
+            <div id="rowWrapper">
+                <div id="topRow" class="row">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>C / C#</li>
+                        <li>R</li>
+                        <li>Java</li>
+                        <li>HTML / CSS</li>
+                    </ul>
+                </div>
+                <div id="bottomRow" class="row">
+                    <h2>Other</h2>
+                    <ul>
+                        <li>Internship with FAPRI</li>
+                        <li>Knowledge of Visual Studio, NetBeans, Brackets, GitHub,         RStudio, and Microsoft Office</li>
+                    </ul>
+                </div>
+            </div>            
+            <!-- Right Column -->
+            <!--Put right column physical width calculations here: 
+                    Right content width =
+                        1122px -> content width (of Main Wrapper)
+                         340px -> left physical width
+                         477px -> middle physical width
+                          42px -> padding (21px left, 21px right)
+                          12px -> border (6px left, 6px right)
+                    -     42px -> margin (21px left, 21px right)
+                    _______________
+                         209px
+
+                    Right physical width =
+                        209px -> content width
+                         42px -> padding (21px left, 21px right)
+                         12px -> border (6px left, 6px right)
+                    +    42px -> margin (21px left, 21px right)
+                    ______________
+                        305px
+            -->
+            <div id="rightColumn" class="leftRightColumns">
+                <h2>Education</h2>
+                <ul>
+                    <li>Elementary School</li>
+                    <li>Middle School</li>
+                    <li>High School</li>
+                    <li>Bachelor's Degree in Computer Science **IN PROGRESS**</li>
+                </ul>
+            </div>
+        </div>
+        <h2>Last updated by Ethan Marchbanks with edmqgc at: 3/17/2021</h2>
+        </div> <!-- end of centering container -->
+    </body>
+</html>
